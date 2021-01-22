@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your cod here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return{name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -49,6 +49,9 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
+  discount: function(string){
+    if
+  }
 }
 
 
@@ -86,6 +89,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews.splice(7, 2, 'this place is chill with really cool people, great for getting work done on weekdays');
 
 
 
@@ -102,9 +106,17 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews, name, rating, feedback) {
+  const results = [];
+  for(let i = 0; i < reviews.length; i++){
+    if(reviews[i][rating].includes(name)){
+      results.push(reviews[i][feedback]);  
+    }
+  }
+  return results;
+  
 }
+
 
 
   
@@ -121,10 +133,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(reviews, name, rating, feedback) {
+  return {};
 } 
-
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
